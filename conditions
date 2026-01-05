@@ -3,12 +3,12 @@
 a = 3 
 b = 2 
 
-if a>b {
-    console.log('I am learning if condition')
-} 
-else {
-    console.log('i am learning if condition and else condition also')
-} 
+// //if a>b {
+//     console.log('I am learning if condition')
+// } 
+// else {
+//     console.log('i am learning if condition and else condition also')
+// } 
 
 // ----
 
