@@ -1,0 +1,83 @@
+//---------------------------conditions------------------------------
+
+a = 3 
+b = 2 
+
+if a>b {
+    console.log('I am learning if condition')
+} 
+else {
+    console.log('i am learning if condition and else condition also')
+} 
+
+// ----
+
+age=19 
+
+if (age>=18){
+    console.log('you are eligible to vote')
+}
+else{
+    console.log('you are not elogible to vote')
+}
+
+// ------
+
+//---Take INPUT  FROM THE USER 
+
+age=+prompt('please enter your age')
+if (age>=18) {
+    console.log('you are eligible to vote')
+}
+else{
+    console.log('you are not eligible to vote')
+}
+
+//---------else if (elif)-------------------
+
+marks=40 
+if (marks>=50){
+    console.log('you are good')
+}
+else if(marks>=35){
+     console.log('you are average student')
+}
+else{
+    console.log('you are failed')
+}
+
+
+// ---------------------switch case ----------------------------
+
+// a switch statement in javascript is a control flow statement that allows you to execute a block of code  among many options  based on the value of expression 
+
+// switch (expression) {
+//     case: value:1
+//     //code to run if expression == value1 
+//     break;
+//     case: value:1
+//     //code to run if expression == value1 
+//     break;
+//     // more cases 
+//     default;
+//     //code to run no one matches  
+// } 
+
+
+switch(sunday){
+    case 'monday':
+        console.log('this is monday')
+        break;
+    case 'tuesday':
+        console.log('this is tuesday')
+        break;
+    case 'monday':
+        console.log('this is wednesday')
+        break;
+    case 'thursday':
+        console.log('this is thursday')
+        break;
+    default:
+        console.log('please enter valid day')    
+                    
+}
