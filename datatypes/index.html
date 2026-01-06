@@ -1,0 +1,78 @@
+// --------------------DATATYPES-----------------------
+
+// 1. primitive datatypes
+      number 
+      string 
+      boolean 
+      undefined
+      biginit 
+      symbol    
+   
+// 2. Non primitive datatypes
+      
+      array 
+      object 
+      function 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        // primitive datatypes 
+        
+        let age = 20 
+        console.log(typeof(age), "age type")
+
+        let name = 'rachana'
+        console.log(typeof(name)) 
+
+        is_present= true 
+        console.log(typeof(is_present))
+
+        let balance=null 
+        console.log(typeof (balance)) 
+
+        let restaurant=undefined 
+        restarunt-="haleem" //NAN 
+        console.log(typeof(restaurant)) 
+
+        //non primitive datatypes 
+
+        let arr=['akhila','murali','venkat','venu'] 
+        console.log(arr[3]) 
+        console.log(arr[1]) 
+
+        //object-dict-key value pairs 
+
+        let developers_data = {
+            name: 'parvin',
+            company_name: 'tcs' 
+        }
+
+        console.log(developers_data.name) //dot nitations 
+        console.log(developers_data["name"]) // bracket notations 
+
+        let array = [{name: "akhila",company_name: "wipro"},{name: "murali",company_name: 'cognizant'}] 
+        console.log(arr[0])
+
+        function hiring(){
+
+        }
+
+        // falsy values 
+        0,"",null,undefined,NAN, False //----> Terminary operator 
+
+        // Nullish operator 
+
+         // null undefined 
+          console.log(false?? 'this is falsy value')
+    </script>
+</body>
+</html>

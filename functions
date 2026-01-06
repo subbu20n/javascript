@@ -1,0 +1,128 @@
+// ---------------------FUNCTIONS--------------------------
+
+for (let i=0; i<5; i++) {
+    stars 
+}
+
+// ------function definition------
+
+function general_fun(){
+    console.log("this is function") 
+}
+
+general_fun() //invoke or call -> both same  
+
+// ----function-Hoist------- 
+
+general_fun() //invoke / call   ---> we can call 10000 lines of code we can call call before 
+
+function general_fun(){
+    console.log("this is function") 
+}
+
+//  --------Function Expression--------- 
+
+// assisgning varibale to a function that is function expression 
+
+let a = function general_fun(){
+    console.log("This is function")
+}
+
+a() 
+
+// --------this is Anonymous function-------------
+
+// function (){  // does not have name aslo called anonymous function 
+
+// }
+
+// --------This is IMmediate invokeed function expression --------------
+(function(){
+    console.log('this is IIFE')
+})
+
+() // we can call like this  
+
+
+// ---this is ARROW function ------
+
+let b=() => {
+    return('this is function expression')
+}
+
+// let res=b() 
+// console.log(res) 
+console.log(b())
+
+// -------- default parameters ------------------
+
+
+function greet(name='subbu'){
+    console.log(name) 
+}
+
+greet() //subbu
+
+
+
+function greet(name){
+    console.log(name)
+}
+
+console.log()  //undefined  
+
+function greet(a,b){
+    console.log(a,b)
+}
+greet(1) // 1 
+greet(1,2) // 1,2 
+
+
+function greet(a=1,b) {
+    console.log(greet) 
+}
+
+greet(2)  //a becomes 2 --> b is -undefined  
+
+//---------Generator function -------------------
+
+function* greet() {
+    yield1 
+    yield2 
+    yield3 
+}
+
+let res=greet() 
+console.log(res.greet()) //1
+console.log(res.greet()) //2
+console.log(res.greet()) //3
+
+console.log(res.greet()) // undefined will come because there is no numbers  
+
+console.log(greet().next(1)) //1 
+console.log(greet().name(1)) //1 
+
+
+// ------Constructor Function -----------------------
+
+function Person() {
+    this.name='subbu' 
+}
+let res = new Person() //invoking   --here 'new' is the keyword  
+console.log(res)
+
+//  -------------Higher Order Function --------------
+
+// A higher order function is a function that either takes another function as an argument or returns a function 
+
+function hoc(value) {
+    console.log(value()) 
+}
+
+hoc(function greet() {
+    console.log('this is greet function')
+})
+
+// function map(array, callback){
+    
+// }

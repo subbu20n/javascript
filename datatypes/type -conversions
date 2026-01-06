@@ -1,0 +1,43 @@
+// ------------------Type conversions------------------------
+
+// let a = "5" 
+a = Number(a) 
+console.log(typeof(a)) //number  
+
+let a = 5 
+a = String(a) 
+console.log(type(a))  //string 
+
+ //--------------------pushpa rule------------------------
+
+ //let a = 10;
+ const b = 20;
+ var c = 30;
+
+ function scope(){
+    console.log(a) //10 
+ }
+
+ scope()//10 
+
+//--------
+
+function scope(){
+     let a = 10;
+     const b = 20;
+     var c = 30;
+}
+scope() 
+console.log(c)  // errror function scope 'var' works with in the function block 
+
+//--------------
+
+{
+    let a = 10;
+    const b = 20;
+    var c = 30;
+}
+
+console.log(c) 
+
+

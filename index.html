@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Access Element methods
+         
+    getElementById -- access element through Id 
+    getElementByClassName -- access elements through class name  
+    getElementByTagName -- 
+    querSelector
+    querySelectorAll 
+
+    properties 
+       innerText 
+       innerHtml 
+       TextContent 
+
+    styles      
+    -->
+    <h1 id="heading">Hello this is heading</h1>
+    <div class="p">this is paragraph1</div>
+    <div class="p">this is paragraph2</div> 
+    <div class="k">this is paragraph3</div> 
+    <div class="k">this is paragraph</div> 
+    <div class="k">this is paragarph</div>
+
+    <script>
+        let heading_ele=document.getElementById('heading') 
+        console.log(heading_ele) 
+
+        let class_elements=document.getElementsByClassName('p') 
+        console.log(class_elements) 
+ 
+        let tag_elements=document.getElementsByTagName('div') 
+        console.log(tag_elements)
+         
+    </script>
+</body>
+</html>

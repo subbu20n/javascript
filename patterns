@@ -1,0 +1,159 @@
+// ----------------------------PATTRNS---------------- 
+
+// step-1: enni rows enni columns vunnai 
+// step-2: first row lo enni columns vunnai
+// step-3: columns increasing / decreasing 
+// step-4: first row lo enni spaces vunnai 
+// step-5: spaces increasing / Decreasing  
+
+for (let i=0; i<5; i++) {
+    stars="" 
+    for (let j=0; j<1+i; j++) {
+        stars+= " *"
+    }
+    console.log(stars)  
+}
+
+//  *
+//  * *
+//  * * *
+//  * * * *
+//  * * * * *
+
+
+for (let i=0 ; i<5; i++) {
+    stars=""
+    for (let j=0; j<5-i; j++) {
+           stars+= " *"
+    }
+    console.log(stars)
+}
+
+//  * * * * *
+//  * * * *
+//  * * *
+//  * *
+//  *
+
+
+for (let i=0; i<5; i++) {
+    stars="" 
+    for (let k=0; k<4-i; k++) {
+           stars+= " "
+    }
+    for (let j=0; j<1+i; j++) {
+        stars+=" *"
+    }
+    console.log(stars)
+}
+
+//      *
+//     * *
+//    * * *
+//   * * * *
+//  * * * * *
+
+for (let i=0; i<5; i++) {
+    stars="" 
+    for (let k=0; k<0+i; k++) {
+        stars+= " "
+    }
+    for (let j=0; j<5-i; j++) {
+        stars+=" *"
+    }
+    console.log(stars)
+}
+
+//  * * * * *
+//   * * * *
+//    * * *
+//     * *
+//      *
+
+for (let i=0; i<5; i++) {
+    stars="" 
+    for (let j=0; j<5; j++) {
+        if (i==0 || j==0 || i==4 || j==4 ) {
+            stars+= " *"
+        }
+        else{
+            stars+= "  "  // here we need to give 2 spaces 
+        }
+    }
+    console.log(stars)
+}
+
+ 
+//  * * * * *
+//  *       *
+//  *       *
+//  *       *
+//  * * * * *
+
+for (let i=0; i<5; i++) {
+    stars="" 
+    for (let j=0; j<5; j++){
+        if(i==0 || j==0 || i==4 || j==4 || i==j || i+j==4 ) {  //i+j==4 == i+j ==n-1 
+                 stars+= " *"
+        }
+        else{
+            stars+= "  "
+        }
+    }
+    console.log(stars)
+}
+
+//  * * * * *
+//  * *   * *
+//  *   *   *
+//  * *   * *
+//  * * * * *
+
+for (let i = 0; i < 5; i++) {
+    stars = "";
+
+    for (let k = 0; k < 4 - i; k++) {
+        stars += " ";
+    }
+
+    for (let j = 0; j < 1 + i; j++) {
+        if (i == 0 || j == 0 || i == 4 || j == 1 + i - 1) {
+            stars += " *";
+        } else {
+            stars += "  ";
+        }
+    }
+
+    console.log(stars);
+}
+
+//      *
+//     * *
+//    *   *
+//   *     *
+//  * * * * *
+
+for (let i = 0; i < 5; i++) {
+    stars = "";
+
+    for (let k = 0; k < 4 + i; k++) {
+        stars += " ";
+    }
+
+    for (let j = 0; j < 5-i; j++) {
+        if (i == 0 || j == 0 || i == 4 || j == 5 - i - 1) {  //remove i==0 
+            stars += " *";
+        } else {
+            stars += "  ";
+        }
+    }
+
+    console.log(stars);
+}
+
+
+    //  * * * * *
+    //   *     *
+    //    *   *
+    //     * *
+    //      *
