@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+       
+        <h1>Heads or Tails</h1> 
+        <p> Flip a vitual coin with this online and free app</p> 
+        <img src="https://mebuk.newgrouplinks.in/wp-content/uploads/2025/06/20250304091625_tosslos.webp" height="250px" width="250px"> 
+        <br/> 
+        <button onclick="Toss()">Flip the Coin</button> 
+
+    </div>
+
+    <script>
+        function Toss(){
+            let random_num = Math.random()*100  // 0-1 
+            random_num = Math.round(random_num) 
+            if (random_num%2 == 0) {
+                let image_ele = document.getElementsByTagName('img')
+                image_ele[0].src= "https://www.flipaindiancoin.in/img/flip-a-rs-20-indian-coin-head-online.png"
+                console.log('Head image',random_num)
+            }else{
+                let image_ele = document.getElementsByTagName('img') 
+                image_ele[0].src = 'https://flipiffy.com/wp-content/uploads/2025/10/1rs-tail.webp'
+            }
+        }
+
+        // creating elements with 'JS' and append to document body 
+        
+        let head_2_ele = document.createElement('h2') 
+        head_2_ele.innerText='heading-2' 
+        document.body.appendChild(head_2_ele) 
+
+        let head_3_ele = document.createElement('h3') 
+        head_3_ele.innerText="heading-3" 
+        document.body.append(head_3_ele)
+
+    </script>
+    
+</body>
+</html>
+
+
+<!-- // math.ramdom  // here math is object and random is function 
+ 
+let math={
+    age:'20'
+    random:function(){
+        return "this is function"
+    }
+}
+console.log(math.random()) -->

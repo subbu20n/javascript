@@ -1,0 +1,53 @@
+<!-- // ------------------DOM DOCUMENT OBJECT MODEL-------------------
+
+// 1. Field Names - document level object creation 
+// 2. Methods - element level object creation 
+
+create dom object by field Names 
+
+properties                   description 
+
+document.body           returns all <body> element 
+document.head           returns all <head> elements  
+document.scripts        returns all <scripts> elements  
+document.anchors        returns all <a> elements have a name attribute 
+document.forms          returns all <form> elements   
+document.images         returns all <img> elements 
+document.links          returns all <areas> and <a> elements that have href  
+document.title          returns the <title>  element                      -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        let head_ele = document.createElement('h1') 
+        head_ele.innerHTML = "heading" 
+        document.body.appendChild(head_ele) 
+
+        let addstyle_btn = document.createElement('button')
+        addstyle_btn.innerHTML = "addStyles" 
+        addstyle_btn.onclick = function addStyles(){
+            head_ele.style.color='green' 
+        }
+        document.body.appendChild(addstyle_btn) 
+        
+        let remove_btn = document.createElement('button') 
+        remove_btn.innerHTML = "remove heading" 
+        remove_btn.onclick = function(){
+            head_ele.remove()
+        }
+        document.body.appendChild(remove_btn)
+        
+    </script>
+  
+</body>
+</html>    

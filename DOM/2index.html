@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web application</title>
+</head>
+<body>
+    <h1 id="heading">this is heading</h1>
+    <p class="para">paragraph1</p>
+    <p class="para">paragraph2</p>
+    <p class="para">paragraph3</p>
+    <p class="chimtu">paragraph4</p>
+    <p class="chimtu">paragraph5</p>
+     
+    <img src="image-11">
+    <img src="image-2"> 
+    <img src="image-3">
+
+    <form><input type="text"></form>
+    <form><input type="text"></form>  
+    <form><input type="text"></form>
+    <form><input type="text"></form>
+
+    <script>
+         
+        // ----- access elements -------
+
+        // let a = document.getElementById("heading")
+        // console.log(a)
+        // let b = document.getElementsByTagName('p')
+        // console.log(b)
+        // let c = document.getElementsByClassName('para') 
+        // console.log(c) 
+        // let d = document.getElementsByClassName('chimtu') 
+        // console.log(d) 
+        // let e = document.querySelector('.para') 
+        // console.log(e) 
+        // let f = document.querySelectorAll('p') 
+        // console.log(f)
+
+        // ------update or modify thecontent from the  elements ----------
+        //   innerHTML 
+        //   innerText 
+        //   textContent 
+        
+        // ---access---
+
+        // let a = document.getElementById('heading')
+        //  console.log(a.innerHTML)        
+
+        // let f = document.querySelectorAll('p')
+        //   console.log(f[0].innerText)  
+
+        // // ---- updating -----
+        
+        // let f = document.querySelectorAll('p') 
+        //   f[0].innerText = "hello subbu" 
+        //   console.log(f[0].innerText) 
+
+        // let a = document.getElementById('heading') 
+        //   a.innerText = "we are developing dynamic application" 
+
+        // ----------styles-------------   
+        //      style.color= "red"
+        //      style.fontsize = "16px" 
+        //      style.backgroundcolor = "purple"  
+
+           let a = document.getElementById('heading') 
+           a.innerText= 'we are develoing dynamic application'  // . notation 
+           //a[innerText] = "we are developing dynamic application" // [] brackate notation  
+           a.style.color = "white" 
+           a.style.backgroundColor = "gold"
+           a.style.fontsize = '30px'
+
+        
+        
+           console.log(document.images)
+           console.log(document.forms)
+    </script> 
+</body>
+</html> 

@@ -108,7 +108,7 @@ console.log(greet().name(1)) //1
 function Person() {
     this.name='subbu' 
 }
-let res = new Person() //invoking   --here 'new' is the keyword  
+// let res = new Person() //invoking   --here 'new' is the keyword  
 console.log(res)
 
 //  -------------Higher Order Function --------------
