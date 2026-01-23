@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+ // dom 
+
+     access 
+     modify 
+     styles 
+     create elements  
+     onclick 
+     remove add  
+     append cheyadam 
+     classList  
+    -->
+
+    <!-- dom -(EVENT LISTENERS)
+
+     inline event listeners  //html   
+     <h1 onclick="addstyles"></h1> 
+     
+     onevent listeners // javascript 
+     ele.onclick=function(){} 
+
+     Add Event Listeners //multiple events add cheyachu in javascript 
+     1.Mouse Events 
+     click 
+     dbclick 
+     mouseover  
+     mouse out 
+     mouse move  
+
+     2. keyboard Events  
+
+     key down 
+     key up 
+
+     3. Form Events  
+
+      submit  
+      change  
+      focus  
+      blur  
+
+     4. Window Events  
+
+       load  
+       resize  
+       scroll  -->
+
+    <h1 id = "head">heading</h1>
+
+    <script> 
+        let btn=document.createElement('button') 
+        btn.textContent="addStyles" 
+        // btn.onclick=function(){
+        //     let a =document.getElementById("head") 
+
+        // a.style.color="purple" 
+       
+        // }
+
+        btn.addEventListener("click",function(){ //arguments has to pass 
+            let a =document.getElementById("head") 
+
+        a.style.color="purple" 
+       
+        })
+
+        document.body.appendChild(btn) 
+       
+    </script>
+</body>
+</html>

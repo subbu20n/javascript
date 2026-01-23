@@ -1,0 +1,104 @@
+<!-- // ------------------DOM DOCUMENT OBJECT MODEL-------------------
+
+// 1. Field Names - document level object creation 
+// 2. Methods - element level object creation 
+
+create dom object by field Names 
+
+properties                   description 
+
+document.body           returns all <body> element 
+document.head           returns all <head> elements  
+document.scripts        returns all <scripts> elements  
+document.anchors        returns all <a> elements have a name attribute 
+document.forms          returns all <form> elements   
+document.images         returns all <img> elements 
+document.links          returns all <areas> and <a> elements that have href  
+document.title          returns the <title>  element                      -->
+
+
+<!-- // topics covered  
+
+create element 
+append child    
+remove child 
+append (which is used to add multiple elements at a time) 
+classList , set Attributes, event Listeners   --> 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            color: blue;
+            font-size: 10px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        <h1>hello world!</h1>
+        <img src="url"/>
+        <button>addstyles<button> 
+
+        let a = document.CreateElement("h1")
+        a.innerHTML="hello world!" 
+        
+        let a = document.CreateElement("img")
+        b.src="hello world!"  
+
+        let c = document.CreateElement("h1")
+        c.innerHTML="hello world!"  
+
+        let d = document.CreateElement("h1")
+        d.innerHTML="hello world!"  
+
+        document.body.append(a,b,c,d)  // append method 
+
+        <h1 class='head'>heading<h1>  //attribute add cheyachu 
+        ele.classList.add("head") 
+        ele.SetAttribute('class','head')  #'classlist' and 'set attribute' we can use any one both are same ''   
+
+        <button onclick="addstyles()">addstyles</button> 
+        <button>remove heading</button> 
+    -->
+    <script>
+       
+        let head_ele = document.createElement('h1') 
+        head_ele.innerHTML = "heading" 
+        document.body.appendChild(head_ele) 
+
+        let addstyle_btn = document.createElement('button')
+        addstyle_btn.innerHTML = "addStyles" 
+        addstyle_btn.onclick = function addStyles(){
+            // head_ele.style.color='green' 
+            // head_ele.style.backgroundColor='blue' 
+            // head_ele.style.padding="20px" 
+            // head_ele.style.margin="2px" 
+            // head_ele.style.border='2px solid orange'
+            head_ele.classList.add("head")
+            head_ele.classList.remove('add')
+            head_ele.setAttribute('target',"head")
+            
+        }
+        document.body.appendChild(addstyle_btn) 
+        
+        let remove_btn = document.createElement('button') 
+        remove_btn.innerHTML = "remove heading" 
+        remove_btn.onclick = function(){
+            head_ele.remove()
+        }
+        document.body.appendChild(remove_btn)
+        
+    </script>
+  
+</body>
+</html>    
