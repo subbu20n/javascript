@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
+        form{
+            display: flex;
+            flex-direction: column; 
+        }
+        input{
+            padding: 4px 15px; 
+        }
+    </style> 
+
+</head>
+<body>
+    <!-- <h1>user registration form</h1>  -->
+    <h1>user login form</h1>
+    <form id="form">
+        <input type="text" placeholder="name" /> 
+        <input type="email" placeholder="email" id="email"/>
+        <input type="password" placeholder="password" id="password"/> 
+        <button type="submit">save</button>
+    </form>
+
+    <script>
+        
+        // if(localstorage.getItem("theme")=="dark") {
+        //     document.body.style.backgroundColor="black"
+        //     document.body.style.color="white"
+        // }
+
+        let form_ele = document.getElementById("form") 
+        form_ele.addEventListener("submit",function(a){
+            a.preventDefault()  // when we refresf also data will not loose 
+
+            let email = document.getElementById('email') 
+            let password = document.getElementById('password') 
+            // conole.log(email.value,password.value) 
+            console.log(email.value) 
+            console.log(password.value) 
+
+            let data=JSON.parse(localStorage.getItem('user_data')) 
+            if (data[0]==email.value&& data[1]==password.value){
+                alert("user logged in successfully") 
+            }else{
+                alert("you are not a valid user please check your credentials")
+            }
+
+            // let user_data = [email.value,password.value] 
+            // // localStorage.setItem("user_date",user_data) 
+            // localStorage.setItem("user_data",JSON.stringify(user_data)) 
+
+            localStorage.setItem('theme',"dark")
+            document.body.style.backgroundColor='black' 
+            document.body.style.color="white"
+        })
+    </script>
+</body>
+</html>

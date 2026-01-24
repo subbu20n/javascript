@@ -66,10 +66,10 @@ person2=person1
 person2.name='subbus' 
 console.log(person2,person1)  // { name: 'subbus', age: 21 } { name: 'subbus', age: 21 }
 
-let person1 = {
-    name: 'subbu',
-    age: 21
-}
+// let person1 = {
+//     name: 'subbu',
+//     age: 21
+// }
 
 person2={...person1}
 person2.name='subbus' 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center; 
+            color: blue; 
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        #cards_container{
+            width: 100vw;
+            height: 100vh;
+            display: flex; 
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+        .card{
+            width: 20vw;
+            height: 50vh; 
+            border: 1px solid black; 
+            border-radius: 4px; 
+            padding: 5px; 
+            margin: 1px;
+        }
+        img{
+            width: 100px;
+            height: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- how to call an api -->
+    <h1>Display all products</h1> 
+    <div id="cards_container"></div> 
+
+    <script>
+       
+       let cards_container = document.getElementById("cards_conatiner") 
+       async function fetch_data(){
+        let response = await fetch("https://fakestoreapi.com/products") 
+        let jsonres = await response.json() // converting to jsin 
+         //console.log(jsonres[0]) 
+         for (let i=0;i<jsonres.length;i++){
+            let card = document.createElement("div") 
+            let head_ele = document.createElement("h1") 
+            head_ele.textContent=jonres[i].title 
+
+            let image_ele = document.createElement("img") 
+            image_ele.src=jsonres[i].image 
+
+            let para_ele = document.createElement("p") 
+            para_ele.innerHTML=jsonres[i].description 
+
+            card.append(head_ele,image_ele,para_ele) 
+            cards_container.appendChild(card) 
+         }
+       }
+
+    </script>
+</body>
+</html>

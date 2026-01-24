@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 5%;
+        }
+        div{
+            padding: 5%;
+            border:2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+      Event bubbling --  bottom to top 
+      Event Capturing --  Top to bottom ( we need to keeep 'true')
+    -->
+    <div>
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let div_elements = document.getElementsByTagName('div') 
+        div_elements[0].addEventListener("click",function(){
+            console.log("parent") 
+            div_elements[0].style.backgroundColor='green'
+        })  
+
+        div_elements[1].addEventListener("click",function(){
+            console.log("child") 
+            div_elements[0].style.backgroundColor='orange'
+        },true)
+
+        div_elements[0].addEventListener("click",function(){
+            console.log("subchild") 
+            div_elements[0].style.backgroundColor='red'
+        },true)
+    </script> 
+</body>
+</html>

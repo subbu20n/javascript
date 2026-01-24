@@ -72,49 +72,80 @@ console.log(str[1]) // e
 
 // Extracts a section of a string and returns it as a  new string  
 
-let str='Hello,world!' 
-console.log(str.slice(7,12))  // world  
+// let str='Hello,world!' 
+// console.log(str.slice(7,12))  // world  
 
-// string substring () 
+// // string substring () 
 
-let str='Hello,world!' 
-console.log(str.slice(7,12))  // world  
+// let str='Hello,world!' 
+// console.log(str.slice(7,12))  // world  
 
-// string to uppercase() 
+// // string to uppercase() 
 
-let str='hello world!' 
-console.log(str.toUpperCase()) 
+// let str='hello world!' 
+// console.log(str.toUpperCase()) 
 
-// string to Lowercase() 
+// // string to Lowercase() 
 
-let str='hello world!' 
-console.log(str.toLowerCase()) 
+// let str='hello world!' 
+// console.log(str.toLowerCase()) 
 
-// string Concat() 
+// // string Concat() 
 
-// string trim() 
+// // string trim() 
 
-let str = 'Hello ,world!' 
-console.log(str.trim()) 
+// let str = 'Hello ,world!' 
+// console.log(str.trim()) 
 
-// string padString() 
+// // string padString() 
 
-let str = '5' 
-console.log(str.padStart(3,'0')) 
+// let str = '5' 
+// console.log(str.padStart(3,'0')) 
 
-let a = '5'
-let b = '17' 
+// let a = '5'
+// let b = '17' 
 
-console.log(a.padStart(3,'0')) 
-console.log(a.padStart(3,'0')) 
-console.log(a.padStart(5,'0')) 
+// console.log(a.padStart(3,'0')) 
+// console.log(a.padStart(3,'0')) 
+// console.log(a.padStart(5,'0')) 
 
-// string Repeat() 
+// // string Repeat() 
 
-let str='Hello' 
-console.log(str.repeat(3)) 
+// let str='Hello' 
+// console.log(str.repeat(3)) 
 
-// string replace() 
+// // string replace() 
 
-let str='Hello world' 
-console.log(str.replace('world,','subbu'))
+// let str='Hello world' 
+// console.log(str.replace('world,','subbu'))
+
+//------------------STRING METHODS IN CRUD OPERATIONS"------------------
+glass = 'milk' 
+glass = 'water'  // reassign 
+console.log(glass)  //water 
+
+//string 
+console.log(glass.length) //5 
+
+// concat 
+
+milk_glass = 'milk' 
+water_glass = ' water' 
+console.log(wtaer_glass+" "+milk_glass)  // water milk 
+console.log(water_glass.concat(" ",milk_glass,"juice")) // water milk juice 
+console.log(wtaer_glass.trin()) // spaces will remove water 
+
+var name = 'hari' 
+var name = "hari" 
+var name = `hari` // string interpolation or Template literals   
+console.log(name)  // hari 
+
+// read 
+console.log(name[1]) // a  
+console.log(name[-1]) // undefined 
+console.log(name.at(-1))   // i  
+
+var name = 'HaRi' 
+console.log(name.toUpperCase()) // HARI 
+console.log(name.toLowerCase()) // hari 
+

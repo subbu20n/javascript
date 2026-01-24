@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LocalStorage | Session | Cookie</h1> 
+    <button onclick="changeThemeLocal()">localStorage</button>
+    <button onclick="changeThemeSession()">sessionStorage</button>
+    <button onclick="changeThemeCookie()">cookie</button> 
+
+    <script>
+        // local stoarge  // local storage is permanent  (both UI will haves )
+        // --> setItem 
+        // --> getItem 
+        // session Storage // session storage is only in original 'UI' will have 
+
+        // if (localStorage.getItem("local_theme")){
+        //     document.body.style.backgroundColor="black" 
+        //     document.body.style.color='white'
+        // }
+
+          if (sessionStorage.getItem("session_theme")){
+            document.body.style.backgroundColor="black" 
+            document.body.style.color='white'
+        }
+
+        function changeThemeLocal(){
+            localStorage.setItem("local_theme","dark")
+        }
+        
+         function changeThemeLocal(){
+            sessionStorage.setItem("session_theme","dark")
+        }
+
+        function changeThemeCookie(){
+            console.log("cookie...setting") 
+            document.cookie='cookie_theme="dark"; Max-Age=5;path="/" ' 
+        }
+
+
+    </script>
+</body>
+</html>
