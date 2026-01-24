@@ -1,0 +1,51 @@
+// ---------------------------Closuers and Even loop ------------------ 
+
+// js--> syncronous code and asynchromous code  
+// synchronous code --> single thread 
+// Asynchronous code --> multiple thread 
+
+console.log('Basmathi rice') 
+console.log('tomatoes') 
+console.log('mirchi') 
+setTimeout(()=>{
+    console.log("chicken") 
+},3000)//3sec 
+setTimeout(()=>{
+    console.log("juice")
+},4000) 
+setTimeout(()=>{
+    console.log("wine") 
+},2000) 
+console.log("stuff") 
+
+// here we keep promise 'promise'  is the first priority in 'MACROTASK' 
+// synchronous code execute complete ayyaka asynchronous code will execute  
+
+// microTask queue is 1st priority 
+
+// macroTask queue is 2nd priority 
+
+// EVEN LOOP: whether it is used to check callstack is empty or not if it is empty it will directly go to the microtask
+// queue any task is there then directly take the task and give it to call task if no task is available in the 
+// microtask queue then it will look into the macrotask queue  
+
+
+// ------------------closuers---------------------
+// a closuer is a function that has accepts to its own space, the sope of the outer function, and the global scope . 
+// this means a closure can remember and access variables from its outer functions even after the function has 
+// finnished executing 
+
+// closuer---> lexical scoping 
+// closure ---> like oninon layers it will remembers again and again ok 
+
+function outer(){
+    let a =10 
+    return function inner(){
+        return function child(){
+            console.log(a) 
+        }
+    }
+}
+
+let res = outer() 
+res()() // function lopala function ni call chestunnamu //10  
